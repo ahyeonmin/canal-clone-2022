@@ -1,0 +1,287 @@
+@import "_variables";
+
+@import url('https://fonts.googleapis.com/css2?family=BioRhyme&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
+
+body {
+    width: 100%;
+    height: 100vh;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+      Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    display: grid;
+    grid-template-columns: 87.5% 12.5%;
+    &::-webkit-scrollbar {
+        display: none; /* Chrome, Safari, Opera*/
+    }
+    font-family: 'Roboto Mono', monospace;
+    font-weight: 400;
+}
+
+main {
+    header {
+        cursor: pointer;
+        position: fixed;
+        margin: 56px;
+        width: 57px;
+        height: 57px;
+        border: black 1px solid;
+        border-radius: 50%;
+    }
+
+    content {
+        .main__top {
+            padding-top: 250px;
+            .top__text {
+                padding: 0 60px;
+                padding-bottom: 130px;
+                font-family: 'BioRhyme', serif;
+                font-size: 65px;
+                line-height: 75px;
+            }
+            .top__img {
+                img {
+                    width: 100%;
+                }
+            }
+        }
+
+        .new__market {
+            padding: 120px 60px 120px 60px;
+            .new__text {
+                width: 600px;
+                font-family: 'BioRhyme', serif;
+                font-size: 90px;
+                line-height: 110px;
+                padding-bottom: 80px;
+            }
+            .new__items {
+                display: flex;
+                justify-content: space-between;
+                .new__item {
+                    img {
+                        width: 340px;
+                        height: 459px;
+                        padding-bottom: 28px;
+                    }
+                    .new__description {
+                        width: 340px;
+                        font-size: 13px;
+                        line-height: 22px;
+                    }
+                }
+            }
+        }
+        
+        .market__events {
+            padding: 0 60px 120px 60px;
+            .events__text {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 0 140px;
+                font-size: 60px;
+                div:nth-child(2) {
+                    font-family: 'BioRhyme', serif;
+                    font-size: 90px;
+                }
+            }
+            hr {
+                margin: 60px 0;
+            }
+            .events__items {
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                .events__item {
+                    text-align: center;
+                    .events__date {
+                        font-size: 12px;
+                        padding-bottom: 15px;
+                    }
+                    .events__info {
+                        font-size: 15px;
+                        line-height: 23px;
+                    }
+                }
+            }
+        }
+
+        .market__map {
+            display: flex;
+            justify-content: space-between;
+            padding: 0 60px 60px 60px;
+            .market__address {
+                cursor: pointer;
+                width: 538px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border: black 1px solid;
+                font-family: 'BioRhyme', serif;
+                font-size: 55px;
+                line-height: 70px;
+            }
+            img {
+                cursor: pointer;
+                border: black 1px solid;
+                width: 538px;
+                height: 337px;
+            }
+        }
+
+        .market__interested {
+            margin: 60px;
+            border-top: black 1px solid;
+            border-bottom: black 1px solid;
+            h3 {
+                font-family: 'BioRhyme', serif;
+                font-size: 40px;
+                text-align: center;
+                margin: 50px 210px 0 210px;
+                background-color: black;
+                color: white;
+            }
+            .btn {
+                padding-bottom: 45px;
+            }
+        }
+
+        .market__sns {
+            padding: 0 60px 0 60px;
+            .sns__items {
+                display: flex;
+                justify-content: space-between;
+                padding-bottom: 60px;
+                .sns__item {
+                    cursor: pointer;
+                    border: black 1px solid;
+                    width: 340px;
+                    height: 192px;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    i {
+                        font-size: 25px;
+                    }
+                    .sns__text {
+                        text-align: center;
+                        padding-top: 20px;
+                        font-size: 14px;
+                        line-height: 20px;
+                    }
+                }
+            }
+            .sns__email {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                border: black 1px solid;
+                padding: 30px 50px;
+                .email__text {
+                    font-size: 22px;
+                    line-height: 30px;
+                    word-spacing: 3px;
+                }
+                form {
+                    display: flex;
+                    justify-content: space-between;
+                    width: 61%;
+                    border: black 1px solid;
+                    display: flex;
+                    align-items: center;
+                    padding: 12px 28px;
+                    .email {
+                        border: none;
+                        font-family: 'Courier New', Courier, monospace;
+                        font-size: 15px;
+                        &:focus {
+                            outline: none;
+                        }
+                    }
+                    .submit {
+                        cursor: pointer;
+                        background-color: white;
+                        border: none;
+                        font-size: 25px;
+                        &:focus {
+                            outline: none;
+                        }
+                    }
+                }
+            }
+        }
+
+        .btn {
+            display: flex;
+            justify-content: center;
+            padding-top: 50px;
+            a {
+                color: black;
+                background-color: white;
+                font-size: 15px;
+                text-decoration: none;
+                border: black 1px solid;
+                padding: 22px 65px;
+                transition: all ease 0.3s;
+                &:hover {
+                    background-color: black;
+                    color: white;
+                }
+            }
+        }
+    }
+
+    footer {
+        display: flex;
+        justify-content: space-between;
+        padding: 60px;
+        font-size: 14px;
+        div:last-child {
+            cursor: pointer;
+            padding-left: 350px;
+            span {
+                text-decoration: line-through;
+            }
+        }
+        a {
+            color: black;
+        }
+    }
+}
+
+nav {
+    position: fixed;
+    right: 0;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    
+    .food, .retail, .community {
+        cursor: pointer;
+        width: 60px;
+        height: 789px;
+        
+        div {
+            font-size: 20px;
+            transform: rotate(90deg);
+            &:first-child {
+                transform: rotate(360deg);
+                text-align: center;
+                padding-top: 80px;
+                padding-bottom: 280px;
+            }
+            &:last-child {
+                display: flex;
+                justify-content: center;
+            }
+        }
+    }
+    .food {
+        background-color: $blue;
+    }
+    .retail {
+        background-color: $red;
+    }
+    .community {
+        background-color: $yellow;
+    }
+}
